@@ -1,0 +1,21 @@
+@keyframes up-down {
+
+    0% {
+        transform-origin: left;
+        transform: translateY(-12px);
+    }
+
+
+    50% {
+        transform: translateY(12px);
+        
+    }
+
+    100% {
+        transform: translateY(-12px);
+    }
+}
+
+.violao{
+    animation: up-down 5s infinite;
+}

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Mooli&display=swap');
+
+:root{
+    --cor-fundo: #dfdfdf;
+    --cor-secundaria: #e28b1ad7;
+    --cor-fundo-alt: #df7d2ecb;
+
+    --cor-btn: #080808e8;
+
+    --cor-fundo-deg: linear-gradient(360deg, #df7d2ecb, #dfdfdf);
+    --cor-fundo-deg2: linear-gradient(360deg, #dfdfdf, #df7d2ecb);
+
+    --cor-fonte: #fff;
+
+    --fonte-principal: "Mooli", sans-serif;
+    --fonte-titulo: "Agbalumo", system-ui;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--cor-fundo);
+    font-family: var(--fonte-principal);
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .5em 1em;
+}
+
+.cabecalho h1{
+    font-family: var(--fonte-titulo);
+}
+
+.cabecalho a, .corpo__bottom a{
+    text-decoration: none;
+    color: var(--cor-fonte);
+    padding: .3em;
+    font-size: 20px;
+    border: none;
+    border-radius: .3em;
+    box-shadow: 2px 2px 2px #00000031;
+    cursor: pointer;
+    background-color: var(--cor-btn);
+    transition: 1s;
+}
+
+.cabecalho a:hover, .corpo__bottom a:hover{
+    padding: .5em;
+    box-shadow: 5px 5px 2px #00000031;
+    transition: 1s;
+}
+
+.cabecalho a:active{
+    /**/
+}
+
+.violao-mini{
+    width: 50px;
+}
+
+.corpo{
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.corpo section{
+    height: 90vh;
+}
+
+.corpo__top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+    background-image: var(--cor-fundo-deg);
+}
+
+.corpo__top-texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    border-radius: 2em;
+    width: 35%;
+    height: 40%;
+}
+
+.corpo__top-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+}
+
+.corpo__top-img a{
+    margin: 1em;
+}
+
+.corpo__top-img div{
+    align-items: center;
+    display: flex;
+}
+
+.botao__app img:hover{
+    filter: opacity(90%);
+}
+
+.botao__app img:active{
+    filter: opacity(100%);
+}
+
+.corpo__middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-fundo-alt);
+}
+
+.corpo__middle h2, .corpo__bottom h2 {
+    padding: 1em;
+}
+
+.corpo__middle div{
+    /*Código*/
+}
+
+.corpo__bottom{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background-image: var(--cor-fundo-deg2);
+}
+
+.corpo__bottom div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.corpo__bottom div p{
+    width: 75%;
+}
