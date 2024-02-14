@@ -14,8 +14,9 @@
     100% {
         transform: translateY(-12px);
     }
+
 }
 
-.violao{
+.violao{    
     animation: up-down 5s infinite;
 }

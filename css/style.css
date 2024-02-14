@@ -56,10 +56,6 @@ body{
     transition: 1s;
 }
 
-.cabecalho a:active{
-    /**/
-}
-
 .violao-mini{
     width: 50px;
 }
@@ -103,6 +99,10 @@ body{
     width: 35%;
 }
 
+.violao {
+    filter: drop-shadow(-4px 2px 4px #000000b0);
+}
+
 .corpo__top-img a{
     margin: 1em;
 }
@@ -130,10 +130,6 @@ body{
 
 .corpo__middle h2, .corpo__bottom h2 {
     padding: 1em;
-}
-
-.corpo__middle div{
-    /*Código*/
 }
 
 .corpo__bottom{
