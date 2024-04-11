@@ -1,115 +1,176 @@
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Mooli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@100..900&display=swap');
 
 :root{
-    --cor-fundo: #dfdfdf;
-    --cor-secundaria: #e28b1ad7;
+    --cor-cabecalho: #FFCFA8;
+    --cor-fundo: #FFEBDB;
+    --cor-secundaria: #DF7D2E;
     --cor-fundo-alt: #df7d2ecb;
 
     --cor-btn: #080808e8;
 
-    --cor-fundo-deg: linear-gradient(360deg, #df7d2ecb, #dfdfdf);
-    --cor-fundo-deg2: linear-gradient(360deg, #dfdfdf, #df7d2ecb);
+    --cor-fundo-deg: radial-gradient(circle 10vw, #FFB375, #FFEBDB);
 
-    --cor-fonte: #fff;
+    --cor-fonte: #090706;
 
-    --fonte-principal: "Mooli", sans-serif;
-    --fonte-titulo: "Agbalumo", system-ui;
+    --fonte-principal: "Inter", sans-serif;
+    --fonte-titulo: "Caveat", cursive;
 }
 
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
 }
 
 body{
-    background-color: var(--cor-fundo);
+    background: var(--cor-fundo);
     font-family: var(--fonte-principal);
+    padding-top: 70px;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+h2{
+    color: var(--cor-secundaria);
+}
+
+fieldset{
+    min-height: 100vh;
+    border: none;
 }
 
 .cabecalho{
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    background-color: var(--cor-cabecalho);
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    margin: .5em 1em;
+    padding: .5em;
+    min-width: 100vw;
 }
 
 .cabecalho h1{
+    display: flex;
     font-family: var(--fonte-titulo);
 }
 
-.cabecalho a, .corpo__bottom a{
-    text-decoration: none;
-    color: var(--cor-fonte);
-    padding: .3em;
-    font-size: 20px;
-    border: none;
-    border-radius: .3em;
-    box-shadow: 2px 2px 2px #00000031;
-    cursor: pointer;
-    background-color: var(--cor-btn);
-    transition: 1s;
-}
-
-.cabecalho a:hover, .corpo__bottom a:hover{
-    padding: .5em;
-    box-shadow: 5px 5px 2px #00000031;
-    transition: 1s;
-}
-
 .violao-mini{
+    margin-left: 8px;
     width: 50px;
 }
 
-.corpo{
-    display: grid;
-    justify-content: space-around;
-    align-items: center;
-    height: 90vh;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-}
-
-.corpo section{
-    height: 90vh;
-}
-
-.corpo__top {
+.cabecalho a, .corpo__bottom a{
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    height: 50vh;
-    background-image: var(--cor-fundo-deg);
+    text-decoration: none;
+    color: var(--cor-fonte);
 }
 
-.corpo__top-texto{
+.cabecalho a img{
+    transform: rotate(180deg);
+}
+
+.seta{
+    width: 15px;
+    margin-left: 4px;
+}
+
+.corpo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100vw;
+}
+
+.corpo__top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    scroll-snap-type: y proximity;
+}
+
+.corpo__top-img {
+    display: flex;
+    justify-content: center;
+    height: 40vh;
+    width: 100%;
+}
+
+.violao, .guitarra{
+    display: block;
+    filter: drop-shadow(-4px 2px 4px #000000b0);
+}
+
+.instrumentos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: var(--cor-fundo-deg);
+}
+
+.botoes{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1em;
-    border-radius: 2em;
-    width: 35%;
-    height: 40%;
 }
 
-.corpo__top-img{
+.botoes h2 {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    height: 15vh;
+}
+
+.botoes div{
+    display: flex;
     align-items: center;
-    width: 35%;
+    justify-content: center;
+    min-height: calc(50vh / 3);
+    min-width: 100vw;
 }
 
-.violao {
-    filter: drop-shadow(-4px 2px 4px #000000b0);
+.android, .ios{
+    display: flex;
+    align-items: center;
+    min-height: 100%;
 }
 
-.corpo__top-img a{
+.android :nth-child(1){
     margin: 1em;
 }
 
-.corpo__top-img div{
-    align-items: center;
-    display: flex;
+.android :nth-child(3){
+    margin: 1em;
+}
+
+.ios :nth-child(1){
+    margin: 1.6em;
+}
+
+.botoes hr{
+    width: 20vw;
+    border-color: #000;
+}
+
+.botao__app{
+    display: block;
+    filter: drop-shadow(4px 2px 2px rgba(0, 0, 0, 0.275));
+
 }
 
 .botao__app img:hover{
@@ -120,33 +181,43 @@ body{
     filter: opacity(100%);
 }
 
-.corpo__middle{
+.corpo__bottom{
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--cor-fundo-alt);
-}
-
-.corpo__middle h2, .corpo__bottom h2 {
-    padding: 1em;
-}
-
-.corpo__bottom{
-    display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    background-image: var(--cor-fundo-deg2);
+    scroll-snap-type: y proximity;
+    /* scroll-snap-align: end; */
 }
 
-.corpo__bottom div{
+.corpo__bottom section {
+    height: calc(100vh / 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.titulo{
+    padding-top: 2em;
+}
+
+
+.sobre{
+    display: flex;
+    height: 30%;
+}
+
+.sobre p{
+    text-align: center;
+    width: 40%;
+}
+
+.objetivo, .vantagens{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
-}
-
-.corpo__bottom div p{
-    width: 75%;
+    justify-content: center;
+    width: 35%;
 }

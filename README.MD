@@ -1,4 +1,5 @@
 ## Cifras Guitar
-    - Projeto de uma página estática para um aplicativo de cifras.
-Nesse projeto uso apenas HTML e CSS para desenvolver um site que passa uma idéia sobre o aplicativo e redireciona para download, porém os links não tem para onde redirecionar.
-Há uma responsividade para celulares e tables.
+
+<div>
+    <p>- O projeto Cifras Guitar está em andamento. Apesar de se tratar de uma página estática (Landing Page), tento trazer um conforto visual e na experiência com o site, como por exemplo, a rolagem mais suave e os botoes direcionarem para as abas da página.</p>
+</div>

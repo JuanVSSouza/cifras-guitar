@@ -17,6 +17,26 @@
 
 }
 
+@keyframes aumenta {
+
+    0% {
+        width: 5vw;
+    }
+
+    100% {
+        width: 20vw;
+    }
+
+}
+
+hr{
+    animation: aumenta 2s alternate;
+}
+
 .violao{    
-    animation: up-down 5s infinite;
+    animation: up-down 10s infinite;
+}
+
+.guitarra{
+    animation: up-down 10s reverse infinite;
 }

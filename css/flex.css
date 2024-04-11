@@ -1,69 +1,45 @@
 /*CELULARES*/
-@media (max-width: 425px){
+@media (max-width: 430px){
+ 
+    /* TOPO */
+    .android :nth-child(1){
+        margin: .5em;
+    }
+    
+    .android :nth-child(3){
+        margin: .5em;
+    }
+    
+    .ios :nth-child(1){
+        margin: .6em;
+    }
+    
+    .android p, .ios p{
+        font-size: 10px;
+    }
 
-    /*header*/
+   .botao__app img{
+    width: 80px;
+   }
 
-    .cabecalho{
-        font-size: 16px;
+   .botoes hr{
+    width: 20vw;
+}
+
+
+    /*SOBRE*/
+
+    .sobre{
         display: flex;
         flex-direction: column;
     }
 
-    /*corpo-top*/
-
-    .corpo {
-        font-size: 14px;
-        height: 90vh;
+    .objetivo, .vantagens{
+        margin-top: 1em;
     }
 
-    .violao {
-        width: 160px;
-        margin: .5em 0;
-    }
-
-    .corpo section{
-        height: 90vh;
-    }
-
-    .corpo__top {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .corpo__top-texto{
-        width: 80vw;
-    }
-
-    .botao__app img{
-        width: 120px;
-    }
-
-    /*corpo-middle*/
-
-    .corpo__middle{
-        font-size: 12px;
-    }
-
-    .video{
-        width: 80vw;
-        height: 60vh;
-    }
-
-    /*corpo-bottom*/
-
-     .corpo__bottom{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .sobre, .vantagens{
+    .objetivo, .vantagens{
         width: 100vw;
-        height: 40vh;
-        font-size: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
 }
@@ -71,65 +47,8 @@
 /*TABLETS*/
 @media (max-width: 768px){
 
-    /*header*/
-    .cabecalho{
-        font-size: 1em;
+    .objetivo, .vantagens{
+        width: 100%;
     }
-
-    .cabecalho a{
-        font-size: 1.3em;
-    }
-
-    /*corpo-geral*/
-
-    .corpo{
-        font-size: 20px;
-    }
-
-    .corpo section{
-        height: 90vh;
-    }
-
-    /*corpo-top*/
-
-    .corpo__top {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .corpo__top-texto{
-        width: 80vw;
-    }
-
-    .botao__app {
-        scale: 1.2;
-    }
-
-    /*corpo-middle*/
-
-    .corpo__middle{
-        font-size: .8em;
-    }
-
-    .video{
-        width: 80vw;
-        height: 60vh;
-    }
-
-    /*corpo-bottom*/
-
-    .corpo__bottom{
-        font-size: .8em;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .sobre, .vantagens{
-        width: 100vw;
-        height: 40vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+    
 }
